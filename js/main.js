@@ -1,45 +1,63 @@
 // 레퍼럴 코드 → 가입 링크에 mb_recommender 반영
+function applyRefToButtons(ref){
+  document.querySelectorAll("a[data-ref]").forEach(a=>{
+    a.href = "https://firstname-ai.com/member/login.php?mb_recommender=" + encodeURIComponent(ref);
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(window.location.search);
   const ref = params.get('ref');
+
+  // URL에 ref가 있으면 바로 적용
   if(ref){
-    document.querySelectorAll('a[data-ref]').forEach(a => {
-      a.href = 'https://firstname-ai.com/member/login.php?mb_recommender=' + encodeURIComponent(ref);
+    applyRefToButtons(ref);
+    const resultBox = document.getElementById("refResult");
+    if(resultBox){
+      const myLink = window.location.origin + window.location.pathname + "?ref=" + ref;
+      resultBox.innerHTML = `
+        <p>URL에 포함된 레퍼럴 코드: <strong>${ref}</strong></p>
+        <p>이 주소를 다른 사람에게 보내면,</p>
+        <p><code>mb_recommender=${ref}</code>로 가입이 진행됩니다.</p>
+        <p style="margin-top:6px;font-size:14px;">공유 링크: <br><strong>${myLink}</strong></p>
+      `;
+    }
+  }
+
+  // 상단 "레퍼럴 코드 설정" 버튼 동작
+  const openRefBtn = document.getElementById("openRefModal");
+  const refModal = document.getElementById("refModal");
+  if(openRefBtn && refModal){
+    openRefBtn.addEventListener("click",(e)=>{
+      e.preventDefault();
+      refModal.style.display = "flex";
     });
   }
 });
 
-// 보상 플랜 계산기
-function calcReward(){
-  const pkg = Number(document.getElementById('pkg').value);
-  let low = 0, high = 0;
-  if(pkg === 3000){ low = 800; high = 1200; }
-  if(pkg === 10000){ low = 1800; high = 3000; }
-  if(pkg === 20000){ low = 3000; high = 5000; }
+// 모달 닫기
+function closeRefModal(){
+  document.getElementById("refModal").style.display = "none";
+}
 
-  const directAmount = Number(document.getElementById('direct').value || 0);
-  const left = Number(document.getElementById('leftVol').value || 0);
-  const right = Number(document.getElementById('rightVol').value || 0);
+// 모달에서 코드 입력 후 적용
+function applyRef(){
+  const input = document.getElementById("refInput");
+  const code = input.value.trim();
+  const resultBox = document.getElementById("refResult");
+  if(!code){
+    resultBox.innerHTML = "<p style='color:#b91c1c;'>추천코드를 입력하세요.</p>";
+    return;
+  }
 
-  const directBonus = directAmount * 0.10;
-  const binaryBonus = Math.min(left, right) * 0.08;
+  // 버튼들에 적용
+  applyRefToButtons(code);
 
-  let rank = '해당 없음', rankBonus = 0;
-  if(left>=5000 && right>=5000){rank='STAR1'; rankBonus=300;}
-  if(left>=20000 && right>=20000){rank='STAR2'; rankBonus=500;}
-  if(left>=50000 && right>=50000){rank='STAR3'; rankBonus=1000;}
-  if(left>=500000 && right>=500000){rank='STAR9'; rankBonus=50000;}
-  if(left>=1000000 && right>=1000000){rank='STAR10'; rankBonus=100000;}
-
-  const total = directBonus + binaryBonus + rankBonus;
-
-  document.getElementById('calcResult').innerHTML = `
-    <h3 style="font-size:18px;margin-bottom:8px;">계산 결과</h3>
-    선택 패키지: $${pkg}<br>
-    월 예상 배당: $${low} ~ $${high}<br><br>
-    추천 보너스 (10%): $${directBonus.toFixed(2)}<br>
-    바이너리 보너스 (8%): $${binaryBonus.toFixed(2)}<br>
-    랭크 달성: ${rank} (${rankBonus})<br><br>
-    <strong>총 예상 보상 합계: $${total.toFixed(2)}</strong>
+  // 공유 링크 생성
+  const myLink = window.location.origin + window.location.pathname + "?ref=" + code;
+  resultBox.innerHTML = `
+    <p>설정된 레퍼럴 코드: <strong>${code}</strong></p>
+    <p>아래 링크를 복사해서 다른 사람에게 전달하세요.</p>
+    <p style="margin-top:6px;font-size:14px;"><strong>${myLink}</strong></p>
   `;
 }

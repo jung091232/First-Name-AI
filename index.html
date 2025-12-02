@@ -16,62 +16,20 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#home">홈</a></li>
-          <li><a href="#about">회사소개</a></li>
-          <li><a href="#project">프로젝트</a></li>
+          <li><a href="#about">회사 소개</a></li>
+          <li><a href="#project">프로젝트 소개</a></li>
           <li><a href="#reward">보상 플랜</a></li>
           <li><a href="#join">참여 방법</a></li>
-          <li><a href="#youtube">홍보 영상</a></li>
-          <li><a href="#signup">가입 안내</a></li>
+          <li><a href="#signup">회원가입 안내</a></li>
+          <li><a href="#" id="openRefModal">레퍼럴 코드 설정</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- HERO -->
-    <section id="home" class="hero">
-      <div class="container hero-grid">
-        <div>
-          <h1 class="hero-title">
-            <span>First Name AI</span><br>
-            Web3 통합 생태계 플랫폼
-          </h1>
-          <p class="hero-sub">
-            전자지갑, 크립토 로또, NFT 배당, NCT 토큰, DIGGER 채굴기, DAO까지 하나로 연결된
-            블록체인 기반 Web3 프로젝트입니다.
-          </p>
-          <div class="hero-tags">
-            <span class="hero-tag">Wallet</span>
-            <span class="hero-tag">Crypto Lotto</span>
-            <span class="hero-tag">NFT Dividend</span>
-            <span class="hero-tag">NCT Token</span>
-            <span class="hero-tag">Mining Device</span>
-            <span class="hero-tag">DAO</span>
-          </div>
-          <div class="hero-buttons">
-            <a href="#project" class="btn btn-ghost">프로젝트 소개</a>
-            <a href="#" class="btn btn-primary" data-ref>지금 가입하기</a>
-          </div>
-          <div class="hero-meta">
-            * 이 페이지 링크 뒤에 <code>?ref=내코드</code> 를 붙여 공유하면,<br>
-            가입 버튼 클릭 시 <code>mb_recommender=내코드</code> 로 자동 적용됩니다.
-          </div>
-        </div>
-        <div class="hero-video-card">
-          <div class="hero-video-label">INTRO VIDEO</div>
-          <div class="hero-video-title">First Name AI 프로젝트 소개 영상</div>
-          <div class="hero-video-box">
-            <video controls poster="assets/images/hero-poster.jpg">
-              <source src="assets/videos/intro.mp4" type="video/mp4">
-              브라우저에서 비디오를 지원하지 않습니다.
-            </video>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ABOUT -->
+    <!-- 1. 회사 소개 -->
     <section id="about">
       <div class="container two-col">
         <div>
@@ -82,69 +40,124 @@
           </p>
           <p>
             베트남 호치민을 중심으로 지갑과 로또 게임, NCT 코인, 배당형 NFT, DIGGER 채굴 디바이스 등
-            다양한 모듈을 개발해 왔습니다.
+            다양한 모듈을 개발해 왔습니다. 50대 이상 사용자도 쉽게 이해할 수 있도록,
+            <strong>“지갑 하나로 지불 · 게임 · 수익 · 채굴 · 배당이 연결되는 구조”</strong>를 지향합니다.
           </p>
-          <ul class="list" style="margin-top:10px;">
-            <li>2023년 – 베트남 본사 설립, 블록체인 전문 개발사 파트너십 체결</li>
-            <li>2024년 – 지갑·로또 게임 설계 및 베타버전 개발·테스트</li>
-            <li>2025년~ – NCT 코인 상장, NFT 배당 구조 도입, DIGGER 채굴기 론칭</li>
+          <ul class="list">
+            <li><strong>2023년</strong> – 베트남 본사 설립, 블록체인 전문 개발사 파트너십 체결</li>
+            <li><strong>2024년</strong> – 지갑·로또 게임 설계 및 베타버전 개발·테스트</li>
+            <li><strong>2025년~</strong> – NCT 코인 상장, NFT 배당 구조 도입, DIGGER 채굴기 론칭</li>
           </ul>
+
           <div class="cta-inline">
-            <a href="#" class="btn btn-primary" data-ref>회사 소개 보고 가입하기</a>
+            <a href="#" class="btn btn-primary" data-ref>프로젝트 참여하고 가입하기</a>
           </div>
         </div>
-        <div class="card">
-          <small>HIGHLIGHT</small>
-          <h3>Web3 실사용 생태계</h3>
-          <p>
-            지갑 하나로 로또 게임, 쇼핑, 채굴, NFT 배당, DAO 참여까지 이어지는
-            실사용 기반 Web3 구조를 지향합니다.
-          </p>
+        <div class="card image-card">
+          <img src="assets/images/about-photo.jpg" alt="회사 소개 이미지">
         </div>
       </div>
     </section>
 
-    <!-- PROJECT -->
+    <!-- 2. 프로젝트 소개 -->
     <section id="project">
       <div class="container">
         <h2 class="section-title">프로젝트 소개</h2>
         <p class="section-sub">
-          Wallet · Crypto Lotto · NCT 토큰 · NFT 배당 · DIGGER 채굴기 · DAO를 하나로 연결한 Web3 통합 생태계입니다.
+          First Name AI 프로젝트는 Wallet · Crypto Lotto · NCT 토큰 · NFT 배당 · DIGGER 채굴기 · DAO를
+          하나로 묶어, “쉽게 참여하고, 눈으로 확인하고, 수익 구조를 이해할 수 있는” Web3 생태계를 목표로 합니다.
         </p>
-        <div class="feature-grid">
-          <div class="card">
-            <small>WALLET</small>
-            <h3>Name Wallet</h3>
-            <p>저장·송금·교환·결제를 지원하는 전자지갑으로, 로또·쇼핑·채굴과 자연스럽게 연동됩니다.</p>
+
+        <div class="two-col" style="margin-bottom:32px;">
+          <div class="card image-card">
+            <img src="assets/images/project-photo.jpg" alt="프로젝트 소개 이미지">
           </div>
-          <div class="card">
-            <small>GAME</small>
-            <h3>Crypto Lotto</h3>
-            <p>매회 5,000장 한정 티켓, 하루 여러 회차 추첨을 통해 반복성과 고빈도 참여를 유도하는 크립토 로또 게임입니다.</p>
-          </div>
-          <div class="card">
-            <small>TOKEN</small>
-            <h3>NCT 유틸리티 코인</h3>
-            <p>NCT는 로또 티켓, 쇼핑몰 결제, 수수료(GAS), 채굴기 구매, NFT 배당 재원 등에서 사용되는 실사용 토큰입니다.</p>
+          <div>
+            <p>
+              단순 코인 판매가 아니라, <strong>전자지갑, 로또 게임, NFT, 채굴 장비, 디지털 결제 카드까지</strong> 연결된
+              “실사용 중심” 모델입니다. 사용자는:
+            </p>
+            <ul class="list">
+              <li>지갑에서 로또·쇼핑·채굴·배당까지 한 번에 접근</li>
+              <li>NCT 코인으로 실제 사용과 리워드를 동시에 경험</li>
+              <li>DAO 참여를 통해 프로젝트 방향성 결정에 동참</li>
+            </ul>
           </div>
         </div>
-        <div class="cta-inline" style="margin-top:22px;">
+
+        <!-- 소개 영상 영역 -->
+        <div class="video-section">
+          <h3 class="sub-title">프로젝트 소개 영상</h3>
+          <p class="section-sub">
+            아래 영상 영역에는 First Name AI 전체 구조를 설명하는 <strong>홍보/설명 영상</strong>이 들어갑니다.
+          </p>
+          <div class="hero-video-box">
+            <video controls poster="assets/images/project-photo.jpg">
+              <source src="assets/videos/intro.mp4" type="video/mp4">
+              브라우저에서 비디오를 지원하지 않습니다.
+            </video>
+          </div>
+        </div>
+
+        <!-- 유튜브 6개 영역 -->
+        <div class="youtube-section">
+          <h3 class="sub-title">홍보 / 교육용 YouTube 영상</h3>
+          <p class="section-sub">
+            총 6개의 홍보·교육 영상을 이곳에 배치할 수 있습니다. 각 <code>iframe</code>의 <code>src</code>에
+            YouTube 링크를 입력하면 바로 재생됩니다.
+          </p>
+          <div class="youtube-grid">
+            <iframe src="" title="홍보 영상 1" allowfullscreen></iframe>
+            <iframe src="" title="홍보 영상 2" allowfullscreen></iframe>
+            <iframe src="" title="홍보 영상 3" allowfullscreen></iframe>
+            <iframe src="" title="홍보 영상 4" allowfullscreen></iframe>
+            <iframe src="" title="홍보 영상 5" allowfullscreen></iframe>
+            <iframe src="" title="홍보 영상 6" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="cta-inline">
           <a href="#" class="btn btn-primary" data-ref>프로젝트 참여하고 가입하기</a>
         </div>
       </div>
     </section>
 
-    <!-- REWARD + CALCULATOR -->
+    <!-- 3. 보상 플랜 -->
     <section id="reward">
       <div class="container">
         <h2 class="section-title">보상 플랜</h2>
         <p class="section-sub">
-          추천(10%), 바이너리(8%), 랭크 보너스, NFT 배당 등 다양한 보상 구조를 통해
-          생태계 참여 인센티브를 제공합니다.
+          First Name AI의 보상 플랜은 “추천(10%) · 업데이트/재구매(7%) · 바이너리(8%) · 랭크 보너스 · NFT 배당”의
+          구조로 구성되어 있습니다. 50대 이상도 이해하기 쉽게, 큰 글씨와 단순한 구조로 정리했습니다.
         </p>
 
+        <div class="two-col" style="margin-bottom:32px;">
+          <div class="card image-card">
+            <img src="assets/images/reward-photo.jpg" alt="보상 플랜 이미지">
+          </div>
+          <div>
+            <ul class="list">
+              <li><strong>다이렉트 보너스 10%</strong> – 내가 직접 추천한 사람의 매출에 대해 10% 보상</li>
+              <li><strong>업데이트 / 재구매 보너스 7%</strong> – 기존 회원의 패키지 업그레이드·재구매에 대한 보상</li>
+              <li><strong>바이너리 보너스 8%</strong> – 좌/우 실적 중 “소실적” 기준으로 8% 보상</li>
+              <li><strong>랭크 보너스</strong> – STAR1 ~ STAR10까지, 누적 매출 기준으로 일회성 추가 보너스</li>
+              <li><strong>NFT 배당</strong> – NFT 보유자에게 회사 수익의 일부를 정기적으로 배당하는 구조</li>
+            </ul>
+            <p style="margin-top:10px;">
+              전체 구조는 어렵게 보일 수 있지만, 아래 <strong>보상 계산기</strong>를 통해
+              “대략 어느 정도 보상이 나올지” 쉽게 감을 잡을 수 있습니다.
+            </p>
+          </div>
+        </div>
+
+        <!-- 보상 계산기 -->
         <div class="calc-grid">
           <div class="calc-form">
+            <h3 class="sub-title">보상 플랜 계산기</h3>
+            <p class="section-sub">
+              패키지 금액, 추천 금액, 좌/우 실적을 넣으면 예상 보상을 대략적으로 계산해볼 수 있습니다.
+            </p>
+
             <label for="pkg">패키지 선택</label>
             <select id="pkg" onchange="calcReward()">
               <option value="3000">$3,000 (일반)</option>
@@ -161,114 +174,120 @@
             <label for="rightVol">우측 실적 (USDT)</label>
             <input id="rightVol" type="number" placeholder="예: 8000" onchange="calcReward()">
 
-            <div style="margin-top:10px;">
-              <button class="btn btn-primary" type="button" onclick="calcReward()">보상 계산하기</button>
-            </div>
-            <div style="margin-top:16px;">
-              <a href="#" class="btn btn-ghost" data-ref>계산 결과 기준으로 가입하기</a>
-            </div>
+            <button class="btn btn-primary" type="button" onclick="calcReward()">보상 계산하기</button>
           </div>
           <div class="calc-result" id="calcResult">
             패키지·추천 금액·좌우 실적을 입력한 뒤<br>
-            <strong>보상 계산하기</strong> 버튼을 눌러 주세요.
+            <strong>“보상 계산하기”</strong> 버튼을 눌러 주세요.
           </div>
+        </div>
+
+        <div class="cta-inline">
+          <a href="#" class="btn btn-primary" data-ref>프로젝트 참여하고 가입하기</a>
         </div>
       </div>
     </section>
 
-    <!-- JOIN STEPS -->
+    <!-- 4. 참여 방법 -->
     <section id="join">
       <div class="container">
         <h2 class="section-title">참여 방법</h2>
         <p class="section-sub">
-          랜딩 페이지 링크를 받은 뒤, 지갑 설치와 가입, 패키지 선택, 참여까지 단계별로 간단하게 진행할 수 있습니다.
+          “어떻게 시작해야 하는지” 단계별로 크게, 쉽게 안내합니다.
         </p>
+
         <div class="steps">
           <div class="step">
             <span>STEP 1</span>
-            <h4>레퍼럴 랜딩 페이지 접속</h4>
-            <p>추천인이 공유한 <code>?ref=코드</code>가 포함된 랜딩 페이지 주소로 접속합니다.</p>
+            <h4>홍보용 랜딩페이지 링크 받기</h4>
+            <p>추천인에게서 <code>firstname-ai-site.vercel.app/?ref=코드</code> 형식의 링크를 전달받습니다.</p>
           </div>
           <div class="step">
             <span>STEP 2</span>
-            <h4>가입 버튼 클릭</h4>
-            <p>페이지 곳곳에 있는 "가입하기" 버튼을 클릭하면 추천코드가 포함된 가입 페이지로 이동합니다.</p>
+            <h4>랜딩페이지에서 설명 확인</h4>
+            <p>회사 소개, 프로젝트 구조, 보상플랜, 영상을 천천히 읽어보면서 이해합니다.</p>
           </div>
           <div class="step">
             <span>STEP 3</span>
-            <h4>회원가입 및 패키지 선택</h4>
-            <p>First Name AI 회원가입을 완료하고, 원하는 패키지와 참여 방식을 선택합니다.</p>
+            <h4>“프로젝트 참여하고 가입하기” 클릭</h4>
+            <p>어느 섹션에서든 보이는 큰 주황색 버튼(가입 버튼)을 클릭합니다.</p>
           </div>
           <div class="step">
             <span>STEP 4</span>
-            <h4>참여 후 본인 코드 공유</h4>
-            <p>가입이 완료되면, 본인의 코드로 <code>?ref=내코드</code> 를 붙여 다른 사람에게 랜딩 페이지를 공유할 수 있습니다.</p>
+            <h4>First Name AI 사이트에서 회원가입</h4>
+            <p>이동된 페이지에서 기본 정보와 지갑 주소 등을 입력해 회원가입을 완료합니다.</p>
           </div>
           <div class="step">
             <span>STEP 5</span>
-            <h4>로또·지갑·NFT·채굴 참여</h4>
-            <p>Crypto Lotto, Wallet, NFT, 채굴기 등 다양한 Web3 서비스를 이용하며 보상을 쌓아갑니다.</p>
+            <h4>백오피스에서 “내 레퍼럴 코드” 확인</h4>
+            <p>백오피스 사이트에서 본인 레퍼럴 코드를 확인합니다. 예: <code>fna111</code></p>
           </div>
           <div class="step">
             <span>STEP 6</span>
-            <h4>보상 관리 및 재추천</h4>
-            <p>지갑에서 보상 상황을 확인하고, 본인의 레퍼럴 페이지를 통해 지속적으로 네트워크를 확장합니다.</p>
+            <h4>내 코드로 다시 링크 만들어 전달</h4>
+            <p>이 랜딩페이지 주소 뒤에 <code>?ref=내코드</code> 를 붙여서 다른 사람에게 전달하면,
+               <strong>내 레퍼럴로 가입</strong>이 이뤄집니다.</p>
           </div>
         </div>
+
         <div class="cta-inline">
-          <a href="#" class="btn btn-primary" data-ref>지금 바로 가입 단계 시작</a>
+          <a href="#" class="btn btn-primary" data-ref>프로젝트 참여하고 가입하기</a>
         </div>
       </div>
     </section>
 
-    <!-- YOUTUBE SECTION -->
-    <section id="youtube">
-      <div class="container">
-        <h2 class="section-title">홍보 영상</h2>
-        <p class="section-sub">
-          First Name AI 비전·지갑·로또·보상 구조를 설명하는 홍보 영상 6편을 여기서 볼 수 있습니다.
-          각 iframe의 src에 YouTube 링크를 입력하면 바로 재생됩니다.
-        </p>
-        <div class="youtube-grid">
-          <iframe src="" title="홍보 영상 1" allowfullscreen></iframe>
-          <iframe src="" title="홍보 영상 2" allowfullscreen></iframe>
-          <iframe src="" title="홍보 영상 3" allowfullscreen></iframe>
-          <iframe src="" title="홍보 영상 4" allowfullscreen></iframe>
-          <iframe src="" title="홍보 영상 5" allowfullscreen></iframe>
-          <iframe src="" title="홍보 영상 6" allowfullscreen></iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- SIGNUP SECTION -->
+    <!-- 5. 회원가입 및 레퍼럴 가입 안내 -->
     <section id="signup">
       <div class="container signup-grid">
-        <div>
-          <div class="login-img">
-            <img src="assets/images/login-placeholder.jpg" alt="First Name AI 로그인 화면" style="width:100%;height:auto;border-radius:16px;">
-          </div>
+        <div class="card image-card">
+          <img src="assets/images/signup-photo.jpg" alt="회원가입 안내 이미지">
         </div>
         <div>
-          <h2>회원가입 & 레퍼럴 안내</h2>
+          <h2 class="section-title">회원가입 및 레퍼럴 가입 안내</h2>
+          <p class="section-sub">
+            이 페이지는 “홍보용 랜딩페이지”이며, 실제 회원가입은 First Name AI의
+            정식 백오피스 사이트에서 진행됩니다.
+          </p>
           <p>
-            이 랜딩 페이지는 <strong>레퍼럴 공유용</strong> 페이지입니다.<br>
-            URL 뒤에 <code>?ref=내코드</code> 를 붙여 전달하면,<br>
-            가입 버튼 클릭 시 <code>mb_recommender=내코드</code> 로 자동 적용됩니다.
+            이 랜딩페이지 주소 뒤에 <code>?ref=내추천코드</code> 를 붙여 공유하면,
+            아래 <strong>“프로젝트 참여하고 가입하기”</strong> 버튼을 클릭하는 순간
+            <code>mb_recommender=내추천코드</code> 값이 자동으로 적용된 가입 페이지로 이동합니다.
           </p>
-          <p style="margin-bottom:18px;">
-            예) <code>https://your-landing-url.com/?ref=fna111</code><br>
-            → 가입 버튼 클릭 시<br>
-            <code>https://firstname-ai.com/member/login.php?mb_recommender=fna111</code>
+          <p style="margin-top:10px;">
+            예시)<br>
+            랜딩페이지: <code>https://firstname-ai-site.vercel.app</code><br>
+            내 코드: <code>fna111</code><br>
+            공유 링크: <code>https://firstname-ai-site.vercel.app/?ref=fna111</code><br>
+            가입 이동: <code>https://firstname-ai.com/member/login.php?mb_recommender=fna111</code>
           </p>
-          <a href="#" class="btn btn-primary btn-big" data-ref>회원가입 페이지로 이동</a>
+
+          <div class="cta-inline" style="margin-top:20px;">
+            <a href="#" class="btn btn-primary btn-big" data-ref>프로젝트 참여하고 가입하기</a>
+          </div>
         </div>
       </div>
     </section>
+
   </main>
+
+  <!-- 레퍼럴 코드 설정 모달 -->
+  <div id="refModal" class="ref-modal">
+    <div class="ref-modal-content">
+      <h3>레퍼럴 코드 설정</h3>
+      <p style="margin-bottom:10px; font-size:16px;">
+        백오피스에서 발급받은 <strong>나의 추천코드</strong>를 입력하면,<br>
+        모든 “가입하기” 버튼에 자동으로 반영됩니다.
+      </p>
+      <input id="refInput" type="text" placeholder="예: fna111">
+      <button class="btn btn-primary" type="button" onclick="applyRef()">적용하기</button>
+      <div id="refResult" class="ref-result"></div>
+      <button class="btn btn-ghost" type="button" onclick="closeRefModal()">닫기</button>
+    </div>
+  </div>
 
   <footer>
     <div class="container">
-      © First Name AI Landing. This page is a referral landing example for the First Name AI project.
+      © First Name AI Landing. 이 페이지는 First Name AI 프로젝트 홍보용 / 레퍼럴 랜딩 예시입니다.
     </div>
   </footer>
 </body>
